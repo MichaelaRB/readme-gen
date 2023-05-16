@@ -1,0 +1,22 @@
+{
+  "name": "readme-gen",
+  "version": "1.0.0",
+  "description": "A program to generate a quality README for github repositories",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MichaelaRB/readme-gen.git"
+  },
+  "author": "Michaela Brown",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MichaelaRB/readme-gen/issues"
+  },
+  "homepage": "https://github.com/MichaelaRB/readme-gen#readme",
+  "dependencies": {
+    "inquirer": "8.2.4"
+  }
+}
