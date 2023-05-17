@@ -1,6 +1,7 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 const baseURL = "https://img.shields.io/badge/";
+const badgeURL = ["/aur/license/:packageName", "/bower/l/:packageName", "/cocoapods/l/:spec","/conda/l/:channel/:package"];
 
 inquirer
     .prompt([
@@ -52,7 +53,17 @@ inquirer
         },
     ])
     .then((data)=> {
-        console.log(JSON.stringify(data, null, '\t'), (err) =>
-        err ? console.log(err) : console.log("Test Successful!")
-        );
+        const fileName = "README.md";
+        const titleEl = "# " + data.name + "\n\n";
+        const tableContents = "## Table of Contents\n Description\n Installation\n Usage\n Contribution Guidelines\n Test Instructions\n Licenses\n Questions\n\n";
+        const descriptionEl = `## Description\n ${data.description}\n\n`;
+        const usageEl = `## Usage\n ${data.usage}\n\n`;
+        const installEl = `## Installation\n ${data.installation}\n\n`;
+        const guidelineEl = `## Guidelines\n ${data.guidelines}\n\n`;
+        const testEl = `## Tests\n ${data.test}\n\n`;
+        const licenseEl = `## Licenses\n ${data.license}\n\n`;
+        const questionEl = `## Questions\n Please direct any questions to\n GitHub: ${data.userName}\n Email: ${data.email}`
+        var docElements = titleEl + tableContents + descriptionEl + usageEl + installEl + guidelineEl + testEl + licenseEl + questionEl;
+        fs.appendFile(fileName, docElements, (err) =>
+            err ? console.log(err) : console.log("Your README file has been created successfully!"));
     });
