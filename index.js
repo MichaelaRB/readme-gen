@@ -54,6 +54,7 @@ inquirer
     ])
     .then((data)=> {
         const fileName = "README.md";
+
         const titleEl = "# " + data.name + "\n\n";
         const tableContents = "## Table of Contents\n Description\n Installation\n Usage\n Contribution Guidelines\n Test Instructions\n Licenses\n Questions\n\n";
         const descriptionEl = `## Description\n ${data.description}\n\n`;
@@ -63,7 +64,9 @@ inquirer
         const testEl = `## Tests\n ${data.test}\n\n`;
         const licenseEl = `## Licenses\n ${data.license}\n\n`;
         const questionEl = `## Questions\n Please direct any questions to\n GitHub: ${data.userName}\n Email: ${data.email}`
+        
         var docElements = titleEl + tableContents + descriptionEl + usageEl + installEl + guidelineEl + testEl + licenseEl + questionEl;
-        fs.appendFile(fileName, docElements, (err) =>
+
+        fs.writeFile(fileName, docElements, (err) =>
             err ? console.log(err) : console.log("Your README file has been created successfully!"));
     });
