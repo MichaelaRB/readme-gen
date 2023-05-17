@@ -56,15 +56,15 @@ inquirer
         const fileName = "README.md";
 
         const titleEl = "# " + data.name + "\n\n";
-        const tableContents = "## Table of Contents\n Description\n Installation\n Usage\n Contribution Guidelines\n Test Instructions\n Licenses\n Questions\n\n";
+        const tableContents = "## Table of Contents\n [Description](#description)\n\n [Usage](#usage)\n\n [Installation](#installation)\n\n [Contribution Guidelines](#guidelines)\n\n [Tests](#tests)\n\n [Licenses](#licenses)\n\n [Questions](#questions)\n\n";
         const descriptionEl = `## Description\n ${data.description}\n\n`;
         const usageEl = `## Usage\n ${data.usage}\n\n`;
         const installEl = `## Installation\n ${data.installation}\n\n`;
         const guidelineEl = `## Guidelines\n ${data.guidelines}\n\n`;
         const testEl = `## Tests\n ${data.test}\n\n`;
         const licenseEl = `## Licenses\n ${data.license}\n\n`;
-        const questionEl = `## Questions\n Please direct any questions to\n GitHub: ${data.userName}\n Email: ${data.email}`
-        
+        const questionEl = `## Questions\n Please direct any questions to\n\n GitHub: ${data.userName}\n\n Email: ${data.email}`
+
         var docElements = titleEl + tableContents + descriptionEl + usageEl + installEl + guidelineEl + testEl + licenseEl + questionEl;
 
         fs.writeFile(fileName, docElements, (err) =>
