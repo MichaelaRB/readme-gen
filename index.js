@@ -35,91 +35,7 @@ inquirer
             type: 'list',
             name: 'license',
             message: 'What licenses does your repository use?',
-            choices: [
-                {
-                    name: 'AUR',
-                    value: 0,
-                },
-                {   
-                    name: 'Bower',
-                    value: 1,
-                }, 
-                {
-                    name: 'Cocoapods',
-                    value: 2,
-                }, 
-                {
-                    name: 'Conda - License',
-                    value: 3,
-                },
-                {
-                    name: 'CPAN',
-                    value: 4,
-                }, 
-                {
-                    name: 'CRAN/METACRAN',
-                    value: 5,
-                }, 
-                {
-                    name: 'Crates.io',
-                    value: 6,
-                }, 
-                {
-                    name: 'CTAN',
-                    value: 7,
-                },
-                {
-                    name: 'DUB',
-                    value: 8,
-                },
-                {
-                    name: 'Eclipse Marketplace',
-                    value: 9,
-                }, 
-                {
-                    name: 'GitHub',
-                    value: 10,
-                }, 
-                {
-                    name: 'GitLab',
-                    value: 11,
-                }, 
-                {
-                    name: 'Greasy Fork', 
-                    value: 12,
-                },
-                {
-                    name: 'Hex.pm',
-                    value: 13,
-                },
-                {
-                    name: 'NPM',
-                    value: 14,
-                },
-                {
-                    name: 'Ore License',
-                    value: 15,
-                },
-                {
-                    name: 'Packagist License',
-                    value: 16,
-                },
-                {
-                    name: 'PyPI - License',
-                    value: 17, 
-                },
-                {
-                    name: 'REUSE Compliance',
-                    value: 18, 
-                },
-                {
-                    name: 'Weblate',
-                    value: 19,
-                },
-                {
-                    name: 'None',
-                    value: 20,
-                }
+            choices: ['AUR', 'Bower','Cocoapods','Conda - License','CPAN','CRAN/METACRAN','Crates.io','CTAN','DUB','Eclipse Marketplace','GitHub', 'GitLab', 'Greasy Fork', 'Hex.pm','NPM','Ore License','Packagist License','PyPI - License', 'REUSE Compliance','Weblate','None',
             ],
         },
         {
@@ -171,7 +87,8 @@ inquirer
         const installEl = `## Installation\n ${data.installation}\n\n`;
         const guidelineEl = `## Guidelines\n ${data.guidelines}\n\n`;
         const testEl = `## Tests\n ${data.test}\n\n`;
-        const licenseEl = `## Licenses\n This project is licensed under ${data.license}.\n\n`;
+        let licenseEl = `## Licenses\n This project is licensed under ${data.license}.\n\n`;
+        if(data.license.indexOf() === 20) licenseEl = '\n\n';
         const questionEl = `## Questions\n Please direct any questions to:\n\n GitHub: ${data.userName}\n\n Email: ${data.email}`
 
         var docElements = titleEl + licenseURL + tableContents + descriptionEl + usageEl + installEl + guidelineEl + testEl + licenseEl + questionEl;

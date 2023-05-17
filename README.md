@@ -1,6 +1,6 @@
-# Test
+# t
 
-![License Badge](https://img.shields.io/badge/no-license-red)
+![License Badge](https://img.shields.io/badgeundefined)
 
 ## Table of Contents
  [Description](#description)
@@ -18,26 +18,26 @@
  [Questions](#questions)
 
 ## Description
- Test
+ t
 
 ## Usage
- Test
+ t
 
 ## Installation
- Test
+ t
 
 ## Guidelines
- Test
+ t
 
 ## Tests
- Test
+ t
 
 ## Licenses
- This project is licensed under 20.
+ This project is licensed under AUR.
 
 ## Questions
- Please direct any questions to
+ Please direct any questions to:
 
- GitHub: Test
+ GitHub: t
 
- Email: Test
+ Email: t
