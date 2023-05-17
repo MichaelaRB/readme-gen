@@ -1,6 +1,6 @@
 # t
 
-![License Badge](https://img.shields.io/badgeundefined)
+![License Badge](https://img.shields.io/badge/aur/license/:packageName)
 
 ## Table of Contents
  [Description](#description)
@@ -40,4 +40,4 @@
 
  GitHub: t
 
- Email: t
+ Email: tt
