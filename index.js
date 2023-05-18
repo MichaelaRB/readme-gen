@@ -137,7 +137,7 @@ inquirer
         {
             type: 'input',
             name: 'installation',
-            message: 'How does one install your project?',
+            message: 'Provide instructions for installing the necessary files for this project.',
         },
         {
             type: 'input',
@@ -147,7 +147,7 @@ inquirer
         {
             type: 'input',
             name: 'test',
-            message: 'How can tests be performed on this project?',
+            message: 'What tests can be run on this application?',
         },
         {
             type: 'input',
