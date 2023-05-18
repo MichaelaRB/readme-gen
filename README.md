@@ -1,6 +1,6 @@
-# t
+# Test
 
-![License Badge](https://img.shields.io/badge/aur/license/:packageName)
+![License Badge](https://img.shields.io/badge/license-MIT-green)
 
 ## Table of Contents
  [Description](#description)
@@ -33,11 +33,11 @@
  t
 
 ## Licenses
- This project is licensed under AUR.
+ This project is licensed under Conda - License.
 
 ## Questions
  Please direct any questions to:
 
  GitHub: t
 
- Email: tt
+ Email: t
