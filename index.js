@@ -161,7 +161,7 @@ inquirer
         },
     ])
     .then((data)=> {
-        const fileName = "README.md";
+        const fileName = "./output/README.md";
         const titleEl = "# " + data.name + "\n\n";
 
         let licenseBadge = badgeURL[data.license];
